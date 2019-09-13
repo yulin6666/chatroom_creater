@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray">
+
+    <LinearLayout
+        android:id="@+id/ll_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:gravity="end|center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_exit_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="?android:selectableItemBackground"
+            android:text="@string/exit_room"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Inverse"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <com.zego.chatroom.creater.AutoScrollTextView
+        android:id="@+id/boardCastView"
+        android:layout_height="40dp"
+        android:layout_width="fill_parent"
+        android:text=""
+        android:textColor="#000"
+        android:inputType="text"
+        android:layout_below="@+id/ll_toolbar"
+        android:textSize="40px">
+
+    </com.zego.chatroom.creater.AutoScrollTextView>
+
+    <Button
+        android:id="@+id/speakButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="500dp"
+        android:background="#ff0000"
+        android:radius="30dp"
+        android:text="说话" />
+
+    <Button
+        android:id="@+id/speakStopButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="500dp"
+        android:layout_marginRight="30dp"
+        android:background="@android:color/darker_gray"
+        android:radius="30dp"
+        android:text="停止" />
+</RelativeLayout>
